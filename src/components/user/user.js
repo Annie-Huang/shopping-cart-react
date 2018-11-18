@@ -1,30 +1,19 @@
 import React, {Component} from 'react';
-import{connect} from 'react-redux';
-import * as userActions from "../../actions/userActions";
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import * as userActions from '../../actions/userActions';
 
 class User extends Component {
-    state = {
-        userId: null,
-        buttonDisable: false
-    };
-
     selectUser = (event) => {
-        this.setState({
-            userId: event.target.value,
-            buttonDisable: true
-        });
         this.props.loadUser(event.target.value);
     };
 
     reset = () => {
-        this.setState({
-            userId: null,
-            buttonDisable: false
-        })
+        this.props.loadUser('default');
     };
 
     render() {
-        const children = ['Apple', 'Ford', 'Nike', 'Unilever'].map(userId =>
+        const userIds = ['Apple', 'Ford', 'Nike', 'Unilever'].map(userId =>
             <button key={userId}
                     value={userId}
                     type="button"
@@ -36,23 +25,75 @@ class User extends Component {
             </button>
         );
 
+        const pricingRules = this.props.pricingRules.map((rule, index) =>
+            <span key={index}>{rule}</span>
+        );
+
         return (
             <div>
-                <h2>Please select a user</h2>
+                {!this.props.user.name && <h2>Please select a user</h2>}
                 <div className="d-flex flex-row justify-content-around my-flex-container">
-                    {children}
+                    {userIds}
                     <button type="button" className="btn btn-danger" onClick={this.reset}>Reset</button>
                 </div>
+
                 <br/>
-                {this.props.user.name && <h4>Selected user: {this.props.user.name}</h4>}
+                {this.props.user.name &&
+                    <div>
+                        <div className='row'>
+                            <div className='col-md-12'>
+                                <h2>
+                                    Welcome {this.props.user.name}, please pick your Ad from our wonderful selection...
+                                </h2>
+                            </div>
+                        </div>
+                        <div className='row' id="pricingRulesMsg">
+                            {pricingRules}
+                        </div>
+                    </div>
+                }
             </div>
         )
     }
 }
 
+User.propTypes = {
+    products: PropTypes.array.isRequired,
+    user: PropTypes.object.isRequired,
+    buttonDisable: PropTypes.bool.isRequired,
+    pricingRules: PropTypes.array.isRequired,
+    loadUser: PropTypes.func.isRequired
+};
+
+const setPricingRulesForDisplay = (rules, products) => {
+    let pricingRules = [];
+    if (rules) {
+        rules.forEach(rule => {
+            let newPrice;
+            const productname = products.find((product) => product.id === rule.productId).name;
+            if (rule.ruleName === 'buyXQtyForYQtyPrice') {
+                const xQty = rule.attributes.find((attr) => attr.name === 'xQty').value;
+                const yQty = rule.attributes.find((attr) => attr.name === 'yQty').value;
+                pricingRules.push('Gets a **' + xQty + ' for ' + yQty + ' deal on ' + productname + 's**');
+            } else if (rule.ruleName === 'newUnitPrice') {
+                newPrice = rule.attributes.find((attr) => attr.name === 'newPrice').value;
+                pricingRules.push('Gets a discount on **' + productname + 's where the price drops to $' + newPrice + ' per ad**');
+            } else if (rule.ruleName === 'newUnitPriceWithMinQty') {
+                newPrice = rule.attributes.find((attr) => attr.name === 'newPrice').value;
+                const minQty = rule.attributes.find((attr) => attr.name === 'minQty').value;
+                pricingRules.push('Gets a discount on **' + productname + 's when ' + minQty +
+                    ' or more** are purchased. The price drops to **$' + newPrice + ' per ad**');
+            }
+        });
+    }
+    return pricingRules;
+};
+
 const mapStateToProps = (state) => ({
+    products: state.products,
     user: state.user,
-    buttonDisable: !!state.user.userId
+    buttonDisable: !!state.user.id,
+    pricingRules: setPricingRulesForDisplay(state.user.pricingRules, state.products)
 });
 
 const mapDispatchToProps = (dispatch) => ({
