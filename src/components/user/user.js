@@ -26,15 +26,19 @@ class User extends Component {
         );
 
         const pricingRules = this.props.pricingRules.map((rule, index) =>
-            <span key={index}>{rule}</span>
+            <div className='col-md-12' key={index}>{rule}</div>
         );
 
         return (
             <div>
                 {!this.props.user.name && <h2>Please select a user</h2>}
-                <div className="d-flex flex-row justify-content-around my-flex-container">
-                    {userIds}
-                    <button type="button" className="btn btn-danger" onClick={this.reset}>Reset</button>
+                <div className='row'>
+                    <div className='col-md-5'>
+                        <div className="d-flex flex-row justify-content-between my-flex-container">
+                            {userIds}
+                            <button type="button" className="btn btn-danger" onClick={this.reset}>Reset</button>
+                        </div>
+                    </div>
                 </div>
 
                 <br/>
@@ -47,7 +51,7 @@ class User extends Component {
                                 </h2>
                             </div>
                         </div>
-                        <div className='row' id="pricingRulesMsg">
+                        <div className='row'>
                             {pricingRules}
                         </div>
                     </div>
