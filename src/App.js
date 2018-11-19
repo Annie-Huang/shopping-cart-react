@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import './App.css';
 import User from './components/user/user';
+import Spinner from './components/common/spinner/spinner';
 import * as productActions from './actions/productActions';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
     render() {
         return (
             <div className='container'>
+                <Spinner/>
                 <User />
             </div>
         );
