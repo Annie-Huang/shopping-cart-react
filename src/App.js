@@ -2,21 +2,25 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import './App.css';
-import User from './components/User/User';
 import Spinner from './components/Common/Spinner/Spinner';
+import User from './components/User/User';
+import ProductList from './components/ProductList/ProductList'
 import * as productActions from './actions/productActions';
 
 class App extends Component {
 
     componentDidMount = () => {
+        // Need to use loadProducts in App initialization beacause product info is use in
+        // both User component's pricing rules list matching as well as Product component.
         this.props.loadProducts();
     };
 
     render() {
         return (
             <div className='container'>
-                <Spinner/>
+                <Spinner />
                 <User />
+                <ProductList />
             </div>
         );
     }
