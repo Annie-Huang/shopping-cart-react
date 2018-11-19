@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import './App.css';
-import User from './components/user/User';
-import Spinner from './components/common/spinner/Spinner';
+import User from './components/User/User';
+import Spinner from './components/Common/Spinner/Spinner';
 import * as productActions from './actions/productActions';
 
 class App extends Component {
