@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import * as userActions from '../../actions/userActions';
 
-class User extends Component {
+class UserList extends Component {
     selectUser = (event) => {
         this.props.loadUser(event.target.value);
     };
@@ -62,7 +62,7 @@ class User extends Component {
     }
 }
 
-User.propTypes = {
+UserList.propTypes = {
     products: PropTypes.array.isRequired,
     user: PropTypes.object.isRequired,
     buttonDisable: PropTypes.bool.isRequired,
@@ -105,4 +105,4 @@ const mapDispatchToProps = (dispatch) => ({
     loadUser: userId => dispatch(userActions.loadUser(userId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(User);
+export default connect(mapStateToProps, mapDispatchToProps)(UserList);
