@@ -4,7 +4,8 @@ import {connect} from 'react-redux';
 import './App.css';
 import Spinner from './components/Common/Spinner/Spinner';
 import User from './components/UserList/UserList';
-import ProductList from './components/ProductList/ProductList'
+import ProductList from './components/ProductList/ProductList';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import * as productActions from './actions/productActions';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
                 <Spinner />
                 <User />
                 <ProductList />
+                <ShoppingCart />
             </div>
         );
     }

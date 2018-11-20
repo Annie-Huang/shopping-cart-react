@@ -17,7 +17,7 @@ class UserList extends Component {
             <button key={userId}
                     value={userId}
                     type="button"
-                    className="btn btn-primary"
+                    className="btn btn-outline-primary"
                     disabled={this.props.buttonDisable}
                     onClick={this.selectUser}
             >
@@ -36,7 +36,7 @@ class UserList extends Component {
                     <div className='col-md-5'>
                         <div className="d-flex flex-row justify-content-between my-flex-container">
                             {userIds}
-                            <button type="button" className="btn btn-danger" onClick={this.reset}>Reset</button>
+                            <button type="button" className="btn btn-outline-danger" onClick={this.reset}>Reset</button>
                         </div>
                     </div>
                 </div>
