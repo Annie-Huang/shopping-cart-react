@@ -6,4 +6,5 @@ export const BEGIN_AJAX_CALL = 'BEGIN_AJAX_CALL';
 export const AJAX_CALL_ERROR = 'AJAX_CALL_ERROR';
 
 export const UPDATE_ITEM_IN_CART = 'UPDATE_ITEM_IN_CART';
+export const EMPTY_ITEM_IN_CART = 'EMPTY_ITEM_IN_CART';
 
