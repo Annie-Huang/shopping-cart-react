@@ -8,6 +8,10 @@ class ProductList extends Component {
         this.props.addProductIntoCart(product);
     };
 
+    removeItem = product => {
+        this.props.removeProductFromCart(product);
+    };
+
     render() {
         const children = this.props.products.map(product =>
             <div className="card" key={product.id}>
@@ -28,7 +32,14 @@ class ProductList extends Component {
                         Add 1 item
                     </button>
                     &nbsp;&nbsp;
-                    <button type="button" className="btn btn-secondary">Remove 1 item</button>
+                    {product.productInCart &&
+                        <button type="button"
+                                className="btn btn-secondary"
+                                onClick={() => this.removeItem(product)}
+                        >
+                            Remove 1 item
+                        </button>
+                    }
                 </div>
             </div>
         );
@@ -46,18 +57,30 @@ class ProductList extends Component {
         )
     }
 }
+
 ProductList.propTypes = {
     products: PropTypes.array.isRequired,
     showProductList: PropTypes.bool.isRequired,
 };
 
+const updateProductsWithInCartInfo = (products, cartItems) => {
+    const updateProducts = [];
+    products.forEach(product => {
+        const matchCartItem = cartItems.find((cartItem) => cartItem.product.id === product.id);
+        updateProducts.push({...product, productInCart: !!matchCartItem});
+    });
+
+    return updateProducts;
+};
+
 const mapStateToProps = (state) => ({
-    products: state.products,
+    products: updateProductsWithInCartInfo(state.products, state.cartItems),
     showProductList: !!state.user.id,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    addProductIntoCart: product => dispatch(shoppingCartActions.addProductIntoCart(product))
+    addProductIntoCart: product => dispatch(shoppingCartActions.addProductIntoCart(product)),
+    removeProductFromCart: product => dispatch(shoppingCartActions.removeProductFromCart(product)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

@@ -22,10 +22,25 @@ const shoppingCartReducer = (state=initialState.cartItems, action) => {
                 item => item.product.id === action.product.id ? updateItem : item
             );
         }
+
+    } else if (action.type === types.REMOVE_PRODUCT_FROM_CART) {
+        const selectedItem = state.find((cartItem) => cartItem.product.id === action.product.id);
+
+        if (selectedItem.quantity === 1) {
+            return [
+                ...state.filter(item => item.product.id !== action.product.id),
+            ];
+
+        } else {
+            const updateItem = Object.assign({}, selectedItem);
+            updateItem.quantity -= 1;
+            return state.map(
+                item => item.product.id === action.product.id ? updateItem : item
+            );
+        }
     }
 
     return state;
-
 };
 
 
