@@ -55,6 +55,7 @@ class ProductList extends Component {
 ProductList.propTypes = {
     products: PropTypes.array.isRequired,
     showProductList: PropTypes.bool.isRequired,
+    updateItemInCart: PropTypes.func.isRequired
 };
 
 const updateProductsWithInCartInfo = (products, cartItems) => {

@@ -43,6 +43,7 @@ class ShoppingCart extends Component {
 
 ShoppingCart.propTypes = {
     cartItems: PropTypes.array.isRequired,
+    showBasket: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({

@@ -64,7 +64,6 @@ UserList.propTypes = {
     products: PropTypes.array.isRequired,
     user: PropTypes.object.isRequired,
     buttonDisable: PropTypes.bool.isRequired,
-    pricingRules: PropTypes.array.isRequired,
     loadUser: PropTypes.func.isRequired
 };
 

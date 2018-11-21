@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 
 const PriceRuleList = ({rules, products}) => {
 
-    console.log('rules=', rules);
-    console.log('products=', products);
-
     const setPricingRulesForDisplay = (rules, products) => {
         let pricingRules = [];
         if (rules) {
