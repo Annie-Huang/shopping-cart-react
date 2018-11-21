@@ -5,13 +5,13 @@ import {connect} from 'react-redux';
 class ShoppingCart extends Component {
 
     render() {
-        const cartItems = [1,2,3].map((index) =>
+        const children = this.props.cartItems.map((cartItem, index) =>
             <div className='row' key={index}>
                 <div className='col-md-7'>
                     <div className="d-flex flex-row justify-content-between my-flex-container">
-                        <div>Classic Ad</div>
-                        <div>Unit Price: $269.99</div>
-                        <div>Quantity: 1</div>
+                        <div>{cartItem.product.name}</div>
+                        <div>Unit Price: ${cartItem.product.price}</div>
+                        <div>Quantity: {cartItem.quantity}</div>
                         <div>Subtotal: $269.99</div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@ class ShoppingCart extends Component {
                     <h3 className="card-title">Your Basket:</h3>
                 </div>
                 <div className="card-body">
-                    {cartItems}
+                    {children}
                     <br/>
                     <div className='row'>
                         <div className='col-md-12'>
@@ -38,6 +38,14 @@ class ShoppingCart extends Component {
             </div>
         );
     }
+}
+
+ShoppingCart.propTypes = {
+    cartItems: PropTypes.array.isRequired,
 };
 
-export default ShoppingCart;
+const mapStateToProps = (state) => ({
+    cartItems: state.cartItems,
+});
+
+export default connect(mapStateToProps, null)(ShoppingCart);

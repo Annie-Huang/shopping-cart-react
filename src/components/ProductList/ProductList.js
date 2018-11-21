@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import * as shoppingCartActions from '../../actions/shoppingCartActions';
 
 class ProductList extends Component {
-    addItem = (event) => {
-        console.log('annie');
+    addItem = product => {
+        this.props.addProductIntoCart(product);
     };
 
     render() {
@@ -22,8 +23,7 @@ class ProductList extends Component {
                 <div className="card-footer">
                     <button type="button"
                             className="btn btn-primary"
-                            value={product}
-                            onClick={this.addItem}
+                            onClick={()=>this.addItem(product)}
                     >
                         Add 1 item
                     </button>
@@ -56,4 +56,8 @@ const mapStateToProps = (state) => ({
     showProductList: !!state.user.id,
 });
 
-export default connect(mapStateToProps, null)(ProductList);
+const mapDispatchToProps = (dispatch) => ({
+    addProductIntoCart: product => dispatch(shoppingCartActions.addProductIntoCart(product))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

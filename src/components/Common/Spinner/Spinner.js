@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import { Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
+import { Dimmer, Loader } from 'semantic-ui-react'
 
 
 class Spinner extends Component{
