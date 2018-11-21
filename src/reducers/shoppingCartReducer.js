@@ -2,12 +2,13 @@ import initialState from './initialState';
 import * as types from '../actions/actionTypes';
 
 const shoppingCartReducer = (state=initialState.cartItems, action) => {
-    if(action.type === types.ADD_PRODUCT_INTO_CART) {
-        const selectedItem = state.find((cartItem) => cartItem.product.id === action.product.id);
+    if (action.type === types.UPDATE_ITEM_IN_CART) {
+        const selectedItem = state.find((cartItem) => cartItem.product.id === action.data.product.id);
 
+        // Item is not in the cartItems, add it.
         if (selectedItem === undefined) {
             const newItem = {
-                product: action.product,
+                product: action.data.product,
                 quantity: 1,
             };
             return [
@@ -16,27 +17,22 @@ const shoppingCartReducer = (state=initialState.cartItems, action) => {
             ];
 
         } else {
+
             const updateItem = Object.assign({}, selectedItem);
-            updateItem.quantity += 1;
-            return state.map(
-                item => item.product.id === action.product.id ? updateItem : item
-            );
-        }
+            updateItem.quantity += action.data.quantity;
 
-    } else if (action.type === types.REMOVE_PRODUCT_FROM_CART) {
-        const selectedItem = state.find((cartItem) => cartItem.product.id === action.product.id);
+            if (updateItem.quantity > 0) {
+                // Update the cartItem with new quantity info for add.
+                return state.map(
+                    item => item.product.id === action.data.product.id ? updateItem : item
+                );
 
-        if (selectedItem.quantity === 1) {
-            return [
-                ...state.filter(item => item.product.id !== action.product.id),
-            ];
-
-        } else {
-            const updateItem = Object.assign({}, selectedItem);
-            updateItem.quantity -= 1;
-            return state.map(
-                item => item.product.id === action.product.id ? updateItem : item
-            );
+            } else {
+                // Remove the cartItem from the cartItems list when quantity subtract to 0.
+                return [
+                    ...state.filter(item => item.product.id !== action.data.product.id),
+                ];
+            }
         }
     }
 

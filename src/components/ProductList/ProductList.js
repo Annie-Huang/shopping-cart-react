@@ -4,12 +4,8 @@ import {connect} from 'react-redux';
 import * as shoppingCartActions from '../../actions/shoppingCartActions';
 
 class ProductList extends Component {
-    addItem = product => {
-        this.props.addProductIntoCart(product);
-    };
-
-    removeItem = product => {
-        this.props.removeProductFromCart(product);
+    updateItemInCart = data => {
+        this.props.updateItemInCart(data);
     };
 
     render() {
@@ -27,7 +23,7 @@ class ProductList extends Component {
                 <div className="card-footer">
                     <button type="button"
                             className="btn btn-primary"
-                            onClick={()=>this.addItem(product)}
+                            onClick={()=>this.updateItemInCart({product, quantity: 1})}
                     >
                         Add 1 item
                     </button>
@@ -35,7 +31,7 @@ class ProductList extends Component {
                     {product.productInCart &&
                         <button type="button"
                                 className="btn btn-secondary"
-                                onClick={() => this.removeItem(product)}
+                                onClick={() => this.updateItemInCart({product, quantity: -1})}
                         >
                             Remove 1 item
                         </button>
@@ -79,8 +75,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    addProductIntoCart: product => dispatch(shoppingCartActions.addProductIntoCart(product)),
-    removeProductFromCart: product => dispatch(shoppingCartActions.removeProductFromCart(product)),
+    updateItemInCart: data => dispatch(shoppingCartActions.updateItemInCart(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
