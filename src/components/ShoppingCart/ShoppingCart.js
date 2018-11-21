@@ -19,6 +19,7 @@ class ShoppingCart extends Component {
         );
 
         return (
+            this.props.showBasket &&
             <div className="card">
                 <div className="card-header bg-info text-white">
                     <h3 className="card-title">Your Basket:</h3>
@@ -46,6 +47,7 @@ ShoppingCart.propTypes = {
 
 const mapStateToProps = (state) => ({
     cartItems: state.cartItems,
+    showBasket: state.cartItems.length > 0
 });
 
 export default connect(mapStateToProps, null)(ShoppingCart);

@@ -40,16 +40,14 @@ class ProductList extends Component {
             </div>
         );
 
-        // (this.props.showProductList &&
         return (
-            (true &&
-                <React.Fragment>
-                    <div className="card-deck">
-                        {children}
-                    </div>
-                    <br/>
-                </React.Fragment>
-            )
+            this.props.showProductList &&
+            <React.Fragment>
+                <div className="card-deck">
+                    {children}
+                </div>
+                <br/>
+            </React.Fragment>
         )
     }
 }
