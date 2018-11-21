@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import * as userActions from '../../actions/userActions';
+import PriceRuleList from './components/PriceRuleList/PriceRuleList';
 
 class UserList extends Component {
     selectUser = (event) => {
@@ -25,13 +26,12 @@ class UserList extends Component {
             </button>
         );
 
-        const pricingRules = this.props.pricingRules.map((rule, index) =>
-            <div className='col-md-12' key={index}>{rule}</div>
-        );
+        const { name, pricingRules } = this.props.user;
+        const { products } = this.props;
 
         return (
             <div>
-                {!this.props.user.name && <h2>Please select a user</h2>}
+                {!name && <h2>Please select a user</h2>}
                 <div className='row'>
                     <div className='col-md-5'>
                         <div className="d-flex flex-row justify-content-between my-flex-container">
@@ -42,18 +42,16 @@ class UserList extends Component {
                 </div>
 
                 <br/>
-                {this.props.user.name &&
+                {name &&
                     <div>
                         <div className='row'>
                             <div className='col-md-12'>
                                 <h2>
-                                    Welcome {this.props.user.name}, please pick your Ad from our wonderful selection...
+                                    Welcome {name}, please pick your Ad from our wonderful selection...
                                 </h2>
                             </div>
                         </div>
-                        <div className='row'>
-                            {pricingRules}
-                        </div>
+                        <PriceRuleList products={products} rules={pricingRules}/>
                     </div>
                 }
                 <br/>
@@ -70,35 +68,10 @@ UserList.propTypes = {
     loadUser: PropTypes.func.isRequired
 };
 
-const setPricingRulesForDisplay = (rules, products) => {
-    let pricingRules = [];
-    if (rules) {
-        rules.forEach(rule => {
-            let newPrice;
-            const productname = products.find((product) => product.id === rule.productId).name;
-            if (rule.ruleName === 'buyXQtyForYQtyPrice') {
-                const xQty = rule.attributes.find((attr) => attr.name === 'xQty').value;
-                const yQty = rule.attributes.find((attr) => attr.name === 'yQty').value;
-                pricingRules.push('Gets a **' + xQty + ' for ' + yQty + ' deal on ' + productname + 's**');
-            } else if (rule.ruleName === 'newUnitPrice') {
-                newPrice = rule.attributes.find((attr) => attr.name === 'newPrice').value;
-                pricingRules.push('Gets a discount on **' + productname + 's where the price drops to $' + newPrice + ' per ad**');
-            } else if (rule.ruleName === 'newUnitPriceWithMinQty') {
-                newPrice = rule.attributes.find((attr) => attr.name === 'newPrice').value;
-                const minQty = rule.attributes.find((attr) => attr.name === 'minQty').value;
-                pricingRules.push('Gets a discount on **' + productname + 's when ' + minQty +
-                    ' or more** are purchased. The price drops to **$' + newPrice + ' per ad**');
-            }
-        });
-    }
-    return pricingRules;
-};
-
 const mapStateToProps = (state) => ({
     products: state.products,
     user: state.user,
     buttonDisable: !!state.user.id,
-    pricingRules: setPricingRulesForDisplay(state.user.pricingRules, state.products)
 });
 
 const mapDispatchToProps = (dispatch) => ({
