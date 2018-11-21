@@ -1,20 +1,18 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import ShoppingCartService from '../../lib/ShoppingCartService';
 
 class ShoppingCart extends Component {
 
     render() {
-        const children = this.props.cartItems.map((cartItem, index) =>
+        const children = this.props.basket.cartItems.map((cartItem, index) =>
             <div className='row' key={index}>
-                <div className='col-md-7'>
-                    <div className="d-flex flex-row justify-content-between my-flex-container">
-                        <div>{cartItem.product.name}</div>
-                        <div>Unit Price: ${cartItem.product.price}</div>
-                        <div>Quantity: {cartItem.quantity}</div>
-                        <div>Subtotal: $269.99</div>
-                    </div>
-                </div>
+                <div className='col-md-2'>{cartItem.product.name}</div>
+                <div className='col-md-2'>Unit Price: ${cartItem.product.price}</div>
+                <div className='col-md-2'>Quantity: {cartItem.quantity}</div>
+                <div className='col-md-2'>Subtotal: ${cartItem.subTotal}</div>
+                {cartItem.discount !== 0 && <div className='col-md-2 text-danger'>Discount: ${cartItem.discount}</div>}
             </div>
         );
 
@@ -29,7 +27,7 @@ class ShoppingCart extends Component {
                     <br/>
                     <div className='row'>
                         <div className='col-md-12'>
-                        <h3 className="card-title">Total: $269.99</h3>
+                        <h3 className="card-title">Total: ${this.props.basket.total}</h3>
                         </div>
                     </div>
                 </div>
@@ -42,12 +40,12 @@ class ShoppingCart extends Component {
 }
 
 ShoppingCart.propTypes = {
-    cartItems: PropTypes.array.isRequired,
+    basket: PropTypes.object.isRequired,
     showBasket: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-    cartItems: state.cartItems,
+    basket: ShoppingCartService.calculateCart(state.cartItems, state.user.pricingRules),
     showBasket: state.cartItems.length > 0
 });
 
