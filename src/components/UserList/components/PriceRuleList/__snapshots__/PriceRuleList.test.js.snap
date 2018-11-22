@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should render Spinner component when loading 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PriceRuleList
+    products={
+      Array [
+        Object {
+          "id": "classic",
+          "name": "Classic Ad",
+          "price": 269.99,
+        },
+        Object {
+          "id": "standout",
+          "name": "Standout Ad",
+          "price": 322.99,
+        },
+        Object {
+          "id": "premium",
+          "name": "Premium Ad",
+          "price": 394.99,
+        },
+      ]
+    }
+    rules={
+      Array [
+        Object {
+          "attributes": Array [
+            Object {
+              "name": "xQty",
+              "value": 5,
+            },
+            Object {
+              "name": "yQty",
+              "value": 4,
+            },
+          ],
+          "productId": "classic",
+          "ruleName": "buyXQtyForYQtyPrice",
+        },
+        Object {
+          "attributes": Array [
+            Object {
+              "name": "newPrice",
+              "value": 309.99,
+            },
+          ],
+          "productId": "standout",
+          "ruleName": "newUnitPrice",
+        },
+        Object {
+          "attributes": Array [
+            Object {
+              "name": "minQty",
+              "value": 3,
+            },
+            Object {
+              "name": "newPrice",
+              "value": 389.99,
+            },
+          ],
+          "productId": "premium",
+          "ruleName": "newUnitPriceWithMinQty",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="col-md-12"
+        >
+          Gets a **5 for 4 deal on Classic Ads**
+        </div>,
+        <div
+          className="col-md-12"
+        >
+          Gets a discount on **Standout Ads where the price drops to $309.99 per ad**
+        </div>,
+        <div
+          className="col-md-12"
+        >
+          Gets a discount on **Premium Ads when 3 or more** are purchased. The price drops to **$389.99 per ad**
+        </div>,
+      ],
+      "className": "row",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Gets a **5 for 4 deal on Classic Ads**",
+          "className": "col-md-12",
+        },
+        "ref": null,
+        "rendered": "Gets a **5 for 4 deal on Classic Ads**",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Gets a discount on **Standout Ads where the price drops to $309.99 per ad**",
+          "className": "col-md-12",
+        },
+        "ref": null,
+        "rendered": "Gets a discount on **Standout Ads where the price drops to $309.99 per ad**",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "host",
+        "props": Object {
+          "children": "Gets a discount on **Premium Ads when 3 or more** are purchased. The price drops to **$389.99 per ad**",
+          "className": "col-md-12",
+        },
+        "ref": null,
+        "rendered": "Gets a discount on **Premium Ads when 3 or more** are purchased. The price drops to **$389.99 per ad**",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="col-md-12"
+          >
+            Gets a **5 for 4 deal on Classic Ads**
+          </div>,
+          <div
+            className="col-md-12"
+          >
+            Gets a discount on **Standout Ads where the price drops to $309.99 per ad**
+          </div>,
+          <div
+            className="col-md-12"
+          >
+            Gets a discount on **Premium Ads when 3 or more** are purchased. The price drops to **$389.99 per ad**
+          </div>,
+        ],
+        "className": "row",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Gets a **5 for 4 deal on Classic Ads**",
+            "className": "col-md-12",
+          },
+          "ref": null,
+          "rendered": "Gets a **5 for 4 deal on Classic Ads**",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Gets a discount on **Standout Ads where the price drops to $309.99 per ad**",
+            "className": "col-md-12",
+          },
+          "ref": null,
+          "rendered": "Gets a discount on **Standout Ads where the price drops to $309.99 per ad**",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "host",
+          "props": Object {
+            "children": "Gets a discount on **Premium Ads when 3 or more** are purchased. The price drops to **$389.99 per ad**",
+            "className": "col-md-12",
+          },
+          "ref": null,
+          "rendered": "Gets a discount on **Premium Ads when 3 or more** are purchased. The price drops to **$389.99 per ad**",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

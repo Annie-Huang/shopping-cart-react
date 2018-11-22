@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import ShoppingCartService from '../../lib/ShoppingCartService';
 
-class ShoppingCart extends Component {
+export class ShoppingCart extends Component {
 
     render() {
         const children = this.props.basket.cartItems.map((cartItem, index) =>

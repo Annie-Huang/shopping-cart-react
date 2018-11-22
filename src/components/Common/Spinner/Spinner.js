@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import { Dimmer, Loader } from 'semantic-ui-react'
 
 
-class Spinner extends Component{
+export class Spinner extends Component{
     render() {
         return (
             this.props.isLoading ?

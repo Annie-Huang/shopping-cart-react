@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PriceRuleList = ({rules, products}) => {
+export const PriceRuleList = ({rules, products}) => {
 
     const setPricingRulesForDisplay = (rules, products) => {
         let pricingRules = [];
