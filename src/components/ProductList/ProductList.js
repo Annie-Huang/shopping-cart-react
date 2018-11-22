@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import toastr from 'toastr/toastr';
 import * as shoppingCartActions from '../../actions/shoppingCartActions';
 
 export class ProductList extends Component {
     updateItemInCart = data => {
-        this.props.updateItemInCart(data);
+        this.props.updateItemInCart(data)
+        const action = data.quantity === 1 ? 'Add' : 'Remove';
+        toastr.success(`${action} one ${data.product.name} success`);
     };
 
     render() {
