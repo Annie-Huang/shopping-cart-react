@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import * as userActions from '../../actions/userActions';
 import PriceRuleList from './components/PriceRuleList/PriceRuleList';
 
-class UserList extends Component {
+export class UserList extends Component {
     selectUser = (event) => {
         this.props.loadUser(event.target.value);
     };

@@ -1,0 +1,2030 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList presentation should render ProductList component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductList
+    products={
+      Array [
+        Object {
+          "id": "classic",
+          "name": "Classic Ad",
+          "price": 269.99,
+          "productInCart": true,
+        },
+        Object {
+          "id": "standout",
+          "name": "Standout Ad",
+          "price": 322.99,
+          "productInCart": false,
+        },
+        Object {
+          "id": "premium",
+          "name": "Premium Ad",
+          "price": 394.99,
+          "productInCart": true,
+        },
+      ]
+    }
+    showProductList={true}
+    updateItemInCart={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-deck"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-header text-center text-white bg-primary"
+            >
+              <h4
+                className="card-title"
+              >
+                Classic Ad
+              </h4>
+            </div>
+            <div
+              className="card-body"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="col-md-3"
+                >
+                  Price:
+                </div>
+                <div
+                  className="col-md-7"
+                >
+                  $
+                  269.99
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <button
+                className="btn btn-primary"
+                onClick={[Function]}
+                type="button"
+              >
+                Add 1 item
+              </button>
+                
+              <button
+                className="btn btn-secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Remove 1 item
+              </button>
+            </div>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-header text-center text-white bg-primary"
+            >
+              <h4
+                className="card-title"
+              >
+                Standout Ad
+              </h4>
+            </div>
+            <div
+              className="card-body"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="col-md-3"
+                >
+                  Price:
+                </div>
+                <div
+                  className="col-md-7"
+                >
+                  $
+                  322.99
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <button
+                className="btn btn-primary"
+                onClick={[Function]}
+                type="button"
+              >
+                Add 1 item
+              </button>
+                
+            </div>
+          </div>
+          <div
+            className="card"
+          >
+            <div
+              className="card-header text-center text-white bg-primary"
+            >
+              <h4
+                className="card-title"
+              >
+                Premium Ad
+              </h4>
+            </div>
+            <div
+              className="card-body"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="col-md-3"
+                >
+                  Price:
+                </div>
+                <div
+                  className="col-md-7"
+                >
+                  $
+                  394.99
+                </div>
+              </div>
+            </div>
+            <div
+              className="card-footer"
+            >
+              <button
+                className="btn btn-primary"
+                onClick={[Function]}
+                type="button"
+              >
+                Add 1 item
+              </button>
+                
+              <button
+                className="btn btn-secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Remove 1 item
+              </button>
+            </div>
+          </div>
+        </div>,
+        <br />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="card"
+            >
+              <div
+                className="card-header text-center text-white bg-primary"
+              >
+                <h4
+                  className="card-title"
+                >
+                  Classic Ad
+                </h4>
+              </div>
+              <div
+                className="card-body"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-md-3"
+                  >
+                    Price:
+                  </div>
+                  <div
+                    className="col-md-7"
+                  >
+                    $
+                    269.99
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <button
+                  className="btn btn-primary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Add 1 item
+                </button>
+                  
+                <button
+                  className="btn btn-secondary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Remove 1 item
+                </button>
+              </div>
+            </div>,
+            <div
+              className="card"
+            >
+              <div
+                className="card-header text-center text-white bg-primary"
+              >
+                <h4
+                  className="card-title"
+                >
+                  Standout Ad
+                </h4>
+              </div>
+              <div
+                className="card-body"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-md-3"
+                  >
+                    Price:
+                  </div>
+                  <div
+                    className="col-md-7"
+                  >
+                    $
+                    322.99
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <button
+                  className="btn btn-primary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Add 1 item
+                </button>
+                  
+              </div>
+            </div>,
+            <div
+              className="card"
+            >
+              <div
+                className="card-header text-center text-white bg-primary"
+              >
+                <h4
+                  className="card-title"
+                >
+                  Premium Ad
+                </h4>
+              </div>
+              <div
+                className="card-body"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-md-3"
+                  >
+                    Price:
+                  </div>
+                  <div
+                    className="col-md-7"
+                  >
+                    $
+                    394.99
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <button
+                  className="btn btn-primary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Add 1 item
+                </button>
+                  
+                <button
+                  className="btn btn-secondary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Remove 1 item
+                </button>
+              </div>
+            </div>,
+          ],
+          "className": "card-deck",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "classic",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="card-header text-center text-white bg-primary"
+                >
+                  <h4
+                    className="card-title"
+                  >
+                    Classic Ad
+                  </h4>
+                </div>,
+                <div
+                  className="card-body"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      269.99
+                    </div>
+                  </div>
+                </div>,
+                <div
+                  className="card-footer"
+                >
+                  <button
+                    className="btn btn-primary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Add 1 item
+                  </button>
+                    
+                  <button
+                    className="btn btn-secondary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Remove 1 item
+                  </button>
+                </div>,
+              ],
+              "className": "card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h4
+                    className="card-title"
+                  >
+                    Classic Ad
+                  </h4>,
+                  "className": "card-header text-center text-white bg-primary",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Classic Ad",
+                    "className": "card-title",
+                  },
+                  "ref": null,
+                  "rendered": "Classic Ad",
+                  "type": "h4",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      269.99
+                    </div>
+                  </div>,
+                  "className": "card-body",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>,
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        269.99
+                      </div>,
+                    ],
+                    "className": "row",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Price:",
+                        "className": "col-md-3",
+                      },
+                      "ref": null,
+                      "rendered": "Price:",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "$",
+                          269.99,
+                        ],
+                        "className": "col-md-7",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "$",
+                        269.99,
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <button
+                      className="btn btn-primary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Add 1 item
+                    </button>,
+                    "  ",
+                    <button
+                      className="btn btn-secondary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Remove 1 item
+                    </button>,
+                  ],
+                  "className": "card-footer",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Add 1 item",
+                      "className": "btn btn-primary",
+                      "onClick": [Function],
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Add 1 item",
+                    "type": "button",
+                  },
+                  "  ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Remove 1 item",
+                      "className": "btn btn-secondary",
+                      "onClick": [Function],
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Remove 1 item",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "standout",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="card-header text-center text-white bg-primary"
+                >
+                  <h4
+                    className="card-title"
+                  >
+                    Standout Ad
+                  </h4>
+                </div>,
+                <div
+                  className="card-body"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      322.99
+                    </div>
+                  </div>
+                </div>,
+                <div
+                  className="card-footer"
+                >
+                  <button
+                    className="btn btn-primary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Add 1 item
+                  </button>
+                    
+                </div>,
+              ],
+              "className": "card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h4
+                    className="card-title"
+                  >
+                    Standout Ad
+                  </h4>,
+                  "className": "card-header text-center text-white bg-primary",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Standout Ad",
+                    "className": "card-title",
+                  },
+                  "ref": null,
+                  "rendered": "Standout Ad",
+                  "type": "h4",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      322.99
+                    </div>
+                  </div>,
+                  "className": "card-body",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>,
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        322.99
+                      </div>,
+                    ],
+                    "className": "row",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Price:",
+                        "className": "col-md-3",
+                      },
+                      "ref": null,
+                      "rendered": "Price:",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "$",
+                          322.99,
+                        ],
+                        "className": "col-md-7",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "$",
+                        322.99,
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <button
+                      className="btn btn-primary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Add 1 item
+                    </button>,
+                    "  ",
+                    false,
+                  ],
+                  "className": "card-footer",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Add 1 item",
+                      "className": "btn btn-primary",
+                      "onClick": [Function],
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Add 1 item",
+                    "type": "button",
+                  },
+                  "  ",
+                  false,
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "premium",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="card-header text-center text-white bg-primary"
+                >
+                  <h4
+                    className="card-title"
+                  >
+                    Premium Ad
+                  </h4>
+                </div>,
+                <div
+                  className="card-body"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      394.99
+                    </div>
+                  </div>
+                </div>,
+                <div
+                  className="card-footer"
+                >
+                  <button
+                    className="btn btn-primary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Add 1 item
+                  </button>
+                    
+                  <button
+                    className="btn btn-secondary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Remove 1 item
+                  </button>
+                </div>,
+              ],
+              "className": "card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h4
+                    className="card-title"
+                  >
+                    Premium Ad
+                  </h4>,
+                  "className": "card-header text-center text-white bg-primary",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Premium Ad",
+                    "className": "card-title",
+                  },
+                  "ref": null,
+                  "rendered": "Premium Ad",
+                  "type": "h4",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      394.99
+                    </div>
+                  </div>,
+                  "className": "card-body",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>,
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        394.99
+                      </div>,
+                    ],
+                    "className": "row",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Price:",
+                        "className": "col-md-3",
+                      },
+                      "ref": null,
+                      "rendered": "Price:",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "$",
+                          394.99,
+                        ],
+                        "className": "col-md-7",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "$",
+                        394.99,
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <button
+                      className="btn btn-primary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Add 1 item
+                    </button>,
+                    "  ",
+                    <button
+                      className="btn btn-secondary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Remove 1 item
+                    </button>,
+                  ],
+                  "className": "card-footer",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Add 1 item",
+                      "className": "btn btn-primary",
+                      "onClick": [Function],
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Add 1 item",
+                    "type": "button",
+                  },
+                  "  ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Remove 1 item",
+                      "className": "btn btn-secondary",
+                      "onClick": [Function],
+                      "type": "button",
+                    },
+                    "ref": null,
+                    "rendered": "Remove 1 item",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-deck"
+          >
+            <div
+              className="card"
+            >
+              <div
+                className="card-header text-center text-white bg-primary"
+              >
+                <h4
+                  className="card-title"
+                >
+                  Classic Ad
+                </h4>
+              </div>
+              <div
+                className="card-body"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-md-3"
+                  >
+                    Price:
+                  </div>
+                  <div
+                    className="col-md-7"
+                  >
+                    $
+                    269.99
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <button
+                  className="btn btn-primary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Add 1 item
+                </button>
+                  
+                <button
+                  className="btn btn-secondary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Remove 1 item
+                </button>
+              </div>
+            </div>
+            <div
+              className="card"
+            >
+              <div
+                className="card-header text-center text-white bg-primary"
+              >
+                <h4
+                  className="card-title"
+                >
+                  Standout Ad
+                </h4>
+              </div>
+              <div
+                className="card-body"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-md-3"
+                  >
+                    Price:
+                  </div>
+                  <div
+                    className="col-md-7"
+                  >
+                    $
+                    322.99
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <button
+                  className="btn btn-primary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Add 1 item
+                </button>
+                  
+              </div>
+            </div>
+            <div
+              className="card"
+            >
+              <div
+                className="card-header text-center text-white bg-primary"
+              >
+                <h4
+                  className="card-title"
+                >
+                  Premium Ad
+                </h4>
+              </div>
+              <div
+                className="card-body"
+              >
+                <div
+                  className="row"
+                >
+                  <div
+                    className="col-md-3"
+                  >
+                    Price:
+                  </div>
+                  <div
+                    className="col-md-7"
+                  >
+                    $
+                    394.99
+                  </div>
+                </div>
+              </div>
+              <div
+                className="card-footer"
+              >
+                <button
+                  className="btn btn-primary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Add 1 item
+                </button>
+                  
+                <button
+                  className="btn btn-secondary"
+                  onClick={[Function]}
+                  type="button"
+                >
+                  Remove 1 item
+                </button>
+              </div>
+            </div>
+          </div>,
+          <br />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="card"
+              >
+                <div
+                  className="card-header text-center text-white bg-primary"
+                >
+                  <h4
+                    className="card-title"
+                  >
+                    Classic Ad
+                  </h4>
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      269.99
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="card-footer"
+                >
+                  <button
+                    className="btn btn-primary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Add 1 item
+                  </button>
+                    
+                  <button
+                    className="btn btn-secondary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Remove 1 item
+                  </button>
+                </div>
+              </div>,
+              <div
+                className="card"
+              >
+                <div
+                  className="card-header text-center text-white bg-primary"
+                >
+                  <h4
+                    className="card-title"
+                  >
+                    Standout Ad
+                  </h4>
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      322.99
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="card-footer"
+                >
+                  <button
+                    className="btn btn-primary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Add 1 item
+                  </button>
+                    
+                </div>
+              </div>,
+              <div
+                className="card"
+              >
+                <div
+                  className="card-header text-center text-white bg-primary"
+                >
+                  <h4
+                    className="card-title"
+                  >
+                    Premium Ad
+                  </h4>
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-3"
+                    >
+                      Price:
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      $
+                      394.99
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="card-footer"
+                >
+                  <button
+                    className="btn btn-primary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Add 1 item
+                  </button>
+                    
+                  <button
+                    className="btn btn-secondary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Remove 1 item
+                  </button>
+                </div>
+              </div>,
+            ],
+            "className": "card-deck",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "classic",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="card-header text-center text-white bg-primary"
+                  >
+                    <h4
+                      className="card-title"
+                    >
+                      Classic Ad
+                    </h4>
+                  </div>,
+                  <div
+                    className="card-body"
+                  >
+                    <div
+                      className="row"
+                    >
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        269.99
+                      </div>
+                    </div>
+                  </div>,
+                  <div
+                    className="card-footer"
+                  >
+                    <button
+                      className="btn btn-primary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Add 1 item
+                    </button>
+                      
+                    <button
+                      className="btn btn-secondary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Remove 1 item
+                    </button>
+                  </div>,
+                ],
+                "className": "card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h4
+                      className="card-title"
+                    >
+                      Classic Ad
+                    </h4>,
+                    "className": "card-header text-center text-white bg-primary",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Classic Ad",
+                      "className": "card-title",
+                    },
+                    "ref": null,
+                    "rendered": "Classic Ad",
+                    "type": "h4",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="row"
+                    >
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        269.99
+                      </div>
+                    </div>,
+                    "className": "card-body",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="col-md-3"
+                        >
+                          Price:
+                        </div>,
+                        <div
+                          className="col-md-7"
+                        >
+                          $
+                          269.99
+                        </div>,
+                      ],
+                      "className": "row",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Price:",
+                          "className": "col-md-3",
+                        },
+                        "ref": null,
+                        "rendered": "Price:",
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "$",
+                            269.99,
+                          ],
+                          "className": "col-md-7",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "$",
+                          269.99,
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <button
+                        className="btn btn-primary"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Add 1 item
+                      </button>,
+                      "  ",
+                      <button
+                        className="btn btn-secondary"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Remove 1 item
+                      </button>,
+                    ],
+                    "className": "card-footer",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Add 1 item",
+                        "className": "btn btn-primary",
+                        "onClick": [Function],
+                        "type": "button",
+                      },
+                      "ref": null,
+                      "rendered": "Add 1 item",
+                      "type": "button",
+                    },
+                    "  ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Remove 1 item",
+                        "className": "btn btn-secondary",
+                        "onClick": [Function],
+                        "type": "button",
+                      },
+                      "ref": null,
+                      "rendered": "Remove 1 item",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "standout",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="card-header text-center text-white bg-primary"
+                  >
+                    <h4
+                      className="card-title"
+                    >
+                      Standout Ad
+                    </h4>
+                  </div>,
+                  <div
+                    className="card-body"
+                  >
+                    <div
+                      className="row"
+                    >
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        322.99
+                      </div>
+                    </div>
+                  </div>,
+                  <div
+                    className="card-footer"
+                  >
+                    <button
+                      className="btn btn-primary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Add 1 item
+                    </button>
+                      
+                  </div>,
+                ],
+                "className": "card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h4
+                      className="card-title"
+                    >
+                      Standout Ad
+                    </h4>,
+                    "className": "card-header text-center text-white bg-primary",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Standout Ad",
+                      "className": "card-title",
+                    },
+                    "ref": null,
+                    "rendered": "Standout Ad",
+                    "type": "h4",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="row"
+                    >
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        322.99
+                      </div>
+                    </div>,
+                    "className": "card-body",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="col-md-3"
+                        >
+                          Price:
+                        </div>,
+                        <div
+                          className="col-md-7"
+                        >
+                          $
+                          322.99
+                        </div>,
+                      ],
+                      "className": "row",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Price:",
+                          "className": "col-md-3",
+                        },
+                        "ref": null,
+                        "rendered": "Price:",
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "$",
+                            322.99,
+                          ],
+                          "className": "col-md-7",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "$",
+                          322.99,
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <button
+                        className="btn btn-primary"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Add 1 item
+                      </button>,
+                      "  ",
+                      false,
+                    ],
+                    "className": "card-footer",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Add 1 item",
+                        "className": "btn btn-primary",
+                        "onClick": [Function],
+                        "type": "button",
+                      },
+                      "ref": null,
+                      "rendered": "Add 1 item",
+                      "type": "button",
+                    },
+                    "  ",
+                    false,
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "premium",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="card-header text-center text-white bg-primary"
+                  >
+                    <h4
+                      className="card-title"
+                    >
+                      Premium Ad
+                    </h4>
+                  </div>,
+                  <div
+                    className="card-body"
+                  >
+                    <div
+                      className="row"
+                    >
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        394.99
+                      </div>
+                    </div>
+                  </div>,
+                  <div
+                    className="card-footer"
+                  >
+                    <button
+                      className="btn btn-primary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Add 1 item
+                    </button>
+                      
+                    <button
+                      className="btn btn-secondary"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      Remove 1 item
+                    </button>
+                  </div>,
+                ],
+                "className": "card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h4
+                      className="card-title"
+                    >
+                      Premium Ad
+                    </h4>,
+                    "className": "card-header text-center text-white bg-primary",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Premium Ad",
+                      "className": "card-title",
+                    },
+                    "ref": null,
+                    "rendered": "Premium Ad",
+                    "type": "h4",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div
+                      className="row"
+                    >
+                      <div
+                        className="col-md-3"
+                      >
+                        Price:
+                      </div>
+                      <div
+                        className="col-md-7"
+                      >
+                        $
+                        394.99
+                      </div>
+                    </div>,
+                    "className": "card-body",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div
+                          className="col-md-3"
+                        >
+                          Price:
+                        </div>,
+                        <div
+                          className="col-md-7"
+                        >
+                          $
+                          394.99
+                        </div>,
+                      ],
+                      "className": "row",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Price:",
+                          "className": "col-md-3",
+                        },
+                        "ref": null,
+                        "rendered": "Price:",
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "$",
+                            394.99,
+                          ],
+                          "className": "col-md-7",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "$",
+                          394.99,
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <button
+                        className="btn btn-primary"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Add 1 item
+                      </button>,
+                      "  ",
+                      <button
+                        className="btn btn-secondary"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        Remove 1 item
+                      </button>,
+                    ],
+                    "className": "card-footer",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Add 1 item",
+                        "className": "btn btn-primary",
+                        "onClick": [Function],
+                        "type": "button",
+                      },
+                      "ref": null,
+                      "rendered": "Add 1 item",
+                      "type": "button",
+                    },
+                    "  ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Remove 1 item",
+                        "className": "btn btn-secondary",
+                        "onClick": [Function],
+                        "type": "button",
+                      },
+                      "ref": null,
+                      "rendered": "Remove 1 item",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

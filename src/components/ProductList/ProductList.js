@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import * as shoppingCartActions from '../../actions/shoppingCartActions';
 
-class ProductList extends Component {
+export class ProductList extends Component {
     updateItemInCart = data => {
         this.props.updateItemInCart(data);
     };
@@ -58,14 +58,14 @@ ProductList.propTypes = {
     updateItemInCart: PropTypes.func.isRequired
 };
 
-const updateProductsWithInCartInfo = (products, cartItems) => {
-    const updateProducts = [];
+export const updateProductsWithInCartInfo = (products, cartItems) => {
+    const updatedProducts = [];
     products.forEach(product => {
         const matchCartItem = cartItems.find((cartItem) => cartItem.product.id === product.id);
-        updateProducts.push({...product, productInCart: !!matchCartItem});
+        updatedProducts.push({...product, productInCart: !!matchCartItem});
     });
 
-    return updateProducts;
+    return updatedProducts;
 };
 
 const mapStateToProps = (state) => ({
