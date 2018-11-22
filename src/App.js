@@ -8,7 +8,7 @@ import ProductList from './components/ProductList/ProductList';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import * as productActions from './actions/productActions';
 
-class App extends Component {
+export class App extends Component {
 
     componentDidMount = () => {
         // Need to use loadProducts in App initialization beacause product info is use in

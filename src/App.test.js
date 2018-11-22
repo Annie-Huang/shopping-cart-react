@@ -1,9 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import {configure as EnzymeConfig, shallow} from "enzyme/build";
+import {createStore} from "redux";
+import rootReducer from "./reducers/rootReducer";
+import initialState from "./reducers/initialState";
 
-xit('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+EnzymeConfig({disableLifecycleMethods: true});
+
+describe('App presentation', () => {
+    const loadProducts = jest.fn();
+    const props = {
+        loadProducts,
+    };
+    const store = createStore(rootReducer, initialState);
+
+    it('should render App component', () => {
+        expect(shallow(<App {...props} />, { context: { store }})).toMatchSnapshot();
+    });
 });
