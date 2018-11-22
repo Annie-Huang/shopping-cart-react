@@ -1,0 +1,18 @@
+[
+    {
+        "product": {
+            "id": "classic",
+            "name": "Classic Ad",
+            "price": 269.99
+        },
+        "quantity": 1
+    },
+    {
+        "product": {
+            "id": "standout",
+            "name": "Standout Ad",
+            "price": 322.99
+        },
+        "quantity": 2
+    }
+]
