@@ -6,6 +6,9 @@ const userReducer = (state=initialState.user, action) => {
         case types.LOAD_USER_SUCCESS:
             return action.user;
 
+        case types.RESET_USER:
+            return {};
+
         default:
             return state;
     }

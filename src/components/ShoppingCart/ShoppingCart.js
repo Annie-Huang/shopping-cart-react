@@ -45,7 +45,10 @@ ShoppingCart.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-    basket: ShoppingCartService.calculateCart(state.cartItems, state.user.pricingRules),
+    basket: (state.user.id ?
+        ShoppingCartService.calculateCart(state.cartItems, state.user.pricingRules) :
+        {cartItems: state.cartItems, total: 0}
+    ),
     showBasket: state.cartItems.length > 0
 });
 

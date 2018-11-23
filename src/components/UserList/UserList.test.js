@@ -4,11 +4,15 @@ import React from "react";
 
 describe('UserList presentation', () => {
     const loadUser = jest.fn();
+    const resetUser = jest.fn();
+    const emptyItemInCart = jest.fn();
     const products = require('../../resources/fixtures/products');
     const user = {};
     const buttonDisable = false;
     const props = {
         loadUser,
+        resetUser,
+        emptyItemInCart,
         products,
         user,
         buttonDisable
@@ -22,6 +26,8 @@ describe('UserList presentation', () => {
         const appleUser =  require('../../resources/fixtures/user-apple');
         const newProps = {
             loadUser,
+            resetUser,
+            emptyItemInCart,
             products,
             user: appleUser,
             buttonDisable: true
@@ -45,17 +51,19 @@ describe('UserList presentation', () => {
         const wrapper = shallow(<UserList {...props} />).instance();
         wrapper.reset();
 
-        expect(loadUser).toBeCalledWith('default');
+        expect(resetUser).toHaveBeenCalled();
+        expect(emptyItemInCart).toHaveBeenCalled();
     });
 
     it('#reset should be called when clicking reset button', () => {
         const wrapper = shallow(<UserList {...props} />);
 
         const buttons = wrapper.find('button');
-        const resetButton =  buttons.at(4);
+        const resetButton =  buttons.at(5);
         expect(resetButton.text()).toBe('Reset');
         resetButton.simulate('click');
 
-        expect(loadUser).toBeCalledWith('default');
+        expect(resetUser).toHaveBeenCalled();
+        expect(emptyItemInCart).toHaveBeenCalled();
     });
 });

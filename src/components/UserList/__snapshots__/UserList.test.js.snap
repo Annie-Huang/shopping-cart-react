@@ -13,7 +13,7 @@ exports[`UserList presentation should render UserList component when a user sele
     className="row"
   >
     <div
-      className="col-md-5"
+      className="col-md-6"
     >
       <div
         className="d-flex flex-row justify-content-between my-flex-container"
@@ -57,6 +57,16 @@ exports[`UserList presentation should render UserList component when a user sele
           value="Unilever"
         >
           Unilever
+        </button>
+        <button
+          className="btn btn-outline-primary"
+          disabled={true}
+          key="Default"
+          onClick={[Function]}
+          type="button"
+          value="Default"
+        >
+          Default
         </button>
         <button
           className="btn btn-outline-danger"
@@ -136,7 +146,7 @@ exports[`UserList presentation should render UserList component when no user sel
     className="row"
   >
     <div
-      className="col-md-5"
+      className="col-md-6"
     >
       <div
         className="d-flex flex-row justify-content-between my-flex-container"
@@ -180,6 +190,16 @@ exports[`UserList presentation should render UserList component when no user sel
           value="Unilever"
         >
           Unilever
+        </button>
+        <button
+          className="btn btn-outline-primary"
+          disabled={false}
+          key="Default"
+          onClick={[Function]}
+          type="button"
+          value="Default"
+        >
+          Default
         </button>
         <button
           className="btn btn-outline-danger"
