@@ -7,7 +7,7 @@ import * as productActions from './productActions';
 // Test a sync action
 describe('productActions', () => {
     it('loadProductsSuccess should create a LOAD_PRODUCTS_SUCCESS action', () => {
-        const products = require('../resources/fixtures/products');
+        const products = require('../resources/fixtures/products.json');
         const expectedAction = {
             type: types.LOAD_PRODUCTS_SUCCESS,
             products: products

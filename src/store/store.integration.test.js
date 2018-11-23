@@ -10,8 +10,8 @@ describe('Store', () => {
     it('Should handle load user', () => {
         // arrange
         const store = createStore(rootReducer, initialState);
-        const products = require('../resources/fixtures/products');
-        const user = require('../resources/fixtures/user-apple');
+        const products = require('../resources/fixtures/products.json');
+        const user = require('../resources/fixtures/user-apple.json');
         const data1 = {
             "product": {
                 "id": "classic",

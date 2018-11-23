@@ -5,7 +5,7 @@ describe('userReducer', () => {
     it('should set user when passed LOAD_USER_SUCCESS', () => {
         // arrange
         const initialState = {};
-        const user = require('../resources/fixtures/user-apple');
+        const user = require('../resources/fixtures/user-apple.json');
         const action = {
             type: types.LOAD_USER_SUCCESS,
             user: user
@@ -39,7 +39,7 @@ describe('userReducer', () => {
     it('when no matching action type should return existing state', () => {
         // arrange
         const initialState = {};
-        const user = require('../resources/fixtures/user-apple');
+        const user = require('../resources/fixtures/user-apple.json');
         const action = {
             type: 'non existing action type',
             user: user

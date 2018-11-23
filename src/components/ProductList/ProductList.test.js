@@ -4,7 +4,7 @@ import {ProductList, updateProductsWithInCartInfo} from './ProductList';
 
 describe('ProductList presentation', () => {
     const updateItemInCart = jest.fn();
-    const products = require('../../resources/fixtures/products');
+    const products = require('../../resources/fixtures/products.json');
     products[0].productInCart = true;
     products[1].productInCart = false;
     products[2].productInCart = true;
@@ -61,8 +61,8 @@ describe('ProductList presentation', () => {
     });
 
     it('#updateProductsWithInCartInfo should be productInCart property into each product', () => {
-        const originalProducts = require('../../resources/fixtures/products');
-        const cartItems = require('../../resources/fixtures/cart-items');
+        const originalProducts = require('../../resources/fixtures/products.json');
+        const cartItems = require('../../resources/fixtures/cart-items.json');
 
         const updatedProducts = updateProductsWithInCartInfo(originalProducts, cartItems);
         expect(updatedProducts[0].productInCart).toBe(true);

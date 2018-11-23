@@ -4,7 +4,7 @@ import React from "react";
 
 
 describe('ShoppingCart presentation', () => {
-    const cartItems = require('../../resources/fixtures/cart-items');
+    const cartItems = require('../../resources/fixtures/cart-items.json');
     cartItems[0].subTotal = 269.99;
     cartItems[0].discount = 0;
     cartItems[1].subTotal = 619.98;

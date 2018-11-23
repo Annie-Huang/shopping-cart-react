@@ -5,7 +5,7 @@ describe('productReducer', () => {
     it('should set products when passed LOAD_PRODUCTS_SUCCESS', () => {
         // arrange
         const initialState = [];
-        const products = require('../resources/fixtures/products');
+        const products = require('../resources/fixtures/products.json');
         const action = {
             type: types.LOAD_PRODUCTS_SUCCESS,
             products: products
@@ -24,7 +24,7 @@ describe('productReducer', () => {
     it('when no matching action type should return existing state', () => {
         // arrange
         const initialState = [];
-        const products = require('../resources/fixtures/products');
+        const products = require('../resources/fixtures/products.json');
         const action = {
             type: 'non existing action type',
             products: products

@@ -6,7 +6,7 @@ describe('UserList presentation', () => {
     const loadUser = jest.fn();
     const resetUser = jest.fn();
     const emptyItemInCart = jest.fn();
-    const products = require('../../resources/fixtures/products');
+    const products = require('../../resources/fixtures/products.json');
     const user = {};
     const buttonDisable = false;
     const props = {
@@ -23,7 +23,7 @@ describe('UserList presentation', () => {
     });
 
     it('should render UserList component when a user selected', () => {
-        const appleUser =  require('../../resources/fixtures/user-apple');
+        const appleUser =  require('../../resources/fixtures/user-apple.json');
         const newProps = {
             loadUser,
             resetUser,

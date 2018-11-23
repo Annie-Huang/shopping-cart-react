@@ -5,7 +5,7 @@ import shoppingCartReducer from "./shoppingCartReducer";
 describe('shoppingCartReducer', () => {
     it('should insert new cartItem if it is not in the list when passed UPDATE_ITEM_IN_CART', () => {
         // arrange
-        const initialState = require('../resources/fixtures/cart-items');
+        const initialState = require('../resources/fixtures/cart-items.json');
         const data =     {
             "product": {
                 "id": "premium",
@@ -31,7 +31,7 @@ describe('shoppingCartReducer', () => {
 
     it('should update quantity in cartItem if it is in the list when passed UPDATE_ITEM_IN_CART', () => {
         // arrange
-        const initialState = require('../resources/fixtures/cart-items');
+        const initialState = require('../resources/fixtures/cart-items.json');
         const data =     {
             "product": {
                 "id": "standout",
@@ -58,7 +58,7 @@ describe('shoppingCartReducer', () => {
 
     it('should remove cartItem if the updated quantity is zero when passed UPDATE_ITEM_IN_CART', () => {
         // arrange
-        const initialState = require('../resources/fixtures/cart-items');
+        const initialState = require('../resources/fixtures/cart-items.json');
         const data =     {
             "product": {
                 "id": "classic",
@@ -83,7 +83,7 @@ describe('shoppingCartReducer', () => {
 
     it('should set cartItems when passed EMPTY_ITEM_IN_CART', () => {
         // arrange
-        const initialState = require('../resources/fixtures/cart-items');
+        const initialState = require('../resources/fixtures/cart-items.json');
         const action = {
             type: types.EMPTY_ITEM_IN_CART,
         };
@@ -94,7 +94,7 @@ describe('shoppingCartReducer', () => {
 
     it('when no matching action type should return existing state', () => {
         // arrange
-        const initialState = require('../resources/fixtures/cart-items');
+        const initialState = require('../resources/fixtures/cart-items.json');
         const data =     {
             "product": {
                 "id": "premium",

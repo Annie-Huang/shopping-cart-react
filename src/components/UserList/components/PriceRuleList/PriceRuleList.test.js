@@ -5,8 +5,8 @@ import React from "react";
 
 describe('Spinner', () => {
     it('should render Spinner component when loading', () => {
-        const fordUser =  require('../../../../resources/fixtures/user-ford');
-        const products =  require('../../../../resources/fixtures/products');
+        const fordUser =  require('../../../../resources/fixtures/user-ford.json');
+        const products =  require('../../../../resources/fixtures/products.json');
         const props = {
             rules: fordUser.pricingRules,
             products: products
