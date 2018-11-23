@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Collapse /> renders collapsed 1`] = `
+<AnimateHeight
+  animateOpacity={false}
+  animationStateClasses={
+    Object {
+      "animating": "rah-animating",
+      "animatingDown": "rah-animating--down",
+      "animatingToHeightAuto": "rah-animating--to-height-auto",
+      "animatingToHeightSpecific": "rah-animating--to-height-specific",
+      "animatingToHeightZero": "rah-animating--to-height-zero",
+      "animatingUp": "rah-animating--up",
+      "static": "rah-static",
+      "staticHeightAuto": "rah-static--height-auto",
+      "staticHeightSpecific": "rah-static--height-specific",
+      "staticHeightZero": "rah-static--height-zero",
+    }
+  }
+  applyInlineTransitions={true}
+  delay={0}
+  duration={400}
+  easing="ease"
+  height={0}
+  style={Object {}}
+>
+  some content
+</AnimateHeight>
+`;
+
+exports[`<Collapse /> renders expanded 1`] = `
+<AnimateHeight
+  animateOpacity={false}
+  animationStateClasses={
+    Object {
+      "animating": "rah-animating",
+      "animatingDown": "rah-animating--down",
+      "animatingToHeightAuto": "rah-animating--to-height-auto",
+      "animatingToHeightSpecific": "rah-animating--to-height-specific",
+      "animatingToHeightZero": "rah-animating--to-height-zero",
+      "animatingUp": "rah-animating--up",
+      "static": "rah-static",
+      "staticHeightAuto": "rah-static--height-auto",
+      "staticHeightSpecific": "rah-static--height-specific",
+      "staticHeightZero": "rah-static--height-zero",
+    }
+  }
+  applyInlineTransitions={true}
+  delay={0}
+  duration={400}
+  easing="ease"
+  height="auto"
+  style={Object {}}
+>
+  Some content
+</AnimateHeight>
+`;

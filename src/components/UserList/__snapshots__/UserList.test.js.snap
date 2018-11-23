@@ -2,6 +2,13 @@
 
 exports[`UserList presentation should render UserList component when a user selected 1`] = `
 <div>
+  <Collapse
+    expanded={false}
+  >
+    <h2>
+      Please select a user
+    </h2>
+  </Collapse>
   <div
     className="row"
   >
@@ -118,9 +125,13 @@ exports[`UserList presentation should render UserList component when a user sele
 
 exports[`UserList presentation should render UserList component when no user selected 1`] = `
 <div>
-  <h2>
-    Please select a user
-  </h2>
+  <Collapse
+    expanded={true}
+  >
+    <h2>
+      Please select a user
+    </h2>
+  </Collapse>
   <div
     className="row"
   >

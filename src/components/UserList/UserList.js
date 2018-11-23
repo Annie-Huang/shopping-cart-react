@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import * as userActions from '../../actions/userActions';
 import PriceRuleList from './components/PriceRuleList/PriceRuleList';
+import Collapse from '../Common/Collapse/Collapse';
 
 export class UserList extends Component {
     selectUser = (event) => {
@@ -31,7 +32,9 @@ export class UserList extends Component {
 
         return (
             <div>
-                {!name && <h2>Please select a user</h2>}
+                <Collapse expanded={!name}>
+                    <h2>Please select a user</h2>
+                </Collapse>
                 <div className='row'>
                     <div className='col-md-5'>
                         <div className="d-flex flex-row justify-content-between my-flex-container">
